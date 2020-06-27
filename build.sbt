@@ -1,4 +1,4 @@
-name := "spark-streaming"
+name := "spark-recomendacao"
 
 version := "0.1"
 
@@ -27,6 +27,8 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
+  "org.apache.spark" %% "spark-mllib" % sparkVersion,
+  "com.databricks" %% "spark-csv" % "1.0.3",
 
   // streaming
   "org.apache.spark" %% "spark-streaming" % sparkVersion,
@@ -52,4 +54,5 @@ libraryDependencies ++= Seq(
   // kafka
   "org.apache.kafka" %% "kafka" % kafkaVersion,
   "org.apache.kafka" % "kafka-streams" % kafkaVersion
+
 )

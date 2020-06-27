@@ -1,6 +1,5 @@
 package com.goolgoplex
 
-import SparkTest.SparkTellDifference.sparkSession
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.{asc, col, count, desc, explode, split}
 import org.apache.spark.sql.functions._
@@ -130,6 +129,6 @@ object Recomendacao extends Serializable {
       )
     users_DF.show(10)
 
-    sparkSession.stop()
+    ss.stop()
   }
 }
